@@ -1,0 +1,21 @@
+{
+  "name": "evercodelab_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickitaMC/EverCodeLab_task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NickitaMC/EverCodeLab_task/issues"
+  },
+  "homepage": "https://github.com/NickitaMC/EverCodeLab_task#readme"
+}
