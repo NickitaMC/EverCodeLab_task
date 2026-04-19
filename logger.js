@@ -1,4 +1,4 @@
-const config = requare('./config');
+const config = require('./config');
 
 function CreateLogger() {
     return function log(message) {
