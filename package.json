@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "node index.js",
+  "test": "jest",
+  "test:watch": "jest --watch",
+  "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -17,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/NickitaMC/EverCodeLab_task/issues"
   },
-  "homepage": "https://github.com/NickitaMC/EverCodeLab_task#readme"
+  "homepage": "https://github.com/NickitaMC/EverCodeLab_task#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
 }

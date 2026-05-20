@@ -1,16 +1,24 @@
-const createLogger = require('./logger');
-const log = createLogger();
+const {ValidationError} = require("./errors")
 
-function scheduleTask(name, interval, task) {
-    log(`Задача "${name}" выполняется каждые ${interval} миллисекунд.`);
+function createScheduler() {
+    return {
+        schedule(name, interval, task) {
+            if (typeof name !== "string" || name.trim() === "") {
+                throw new ValidationError("Нет названия задачи!");
+            }
 
-    setInterval(() => {
-        task();
-    }, interval);
+            if (typeof interval !== "number" || interval <= 0) {
+                throw new ValidationError("Интервал не может быть меньше или равен 0");
+            }
+
+            if (typeof task !== "function") {
+                throw new ValidationError("task должен быть функцией");
+            }
+
+            return setInterval(task, interval);
+            
+        }
+    };
 }
 
-scheduleTask('running logger', 10000, () => {
-    log("running");
-});
-
-module.exports = scheduleTask;
+module.exports = createScheduler;
