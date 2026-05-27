@@ -50,12 +50,12 @@ function createLogger(config) {
 
         const formattedMessage = formatMessage(level, message, requestId);
 
-        if (level === LEVELS.ERROR) {
+        if (level === LEVELS.error) {
             console.error(formattedMessage);
             return;
         }
 
-        if (level === LEVELS.WARN) {
+        if (level === LEVELS.warn) {
             console.warn(formattedMessage);
             return;
         }
